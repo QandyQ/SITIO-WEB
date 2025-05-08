@@ -1,0 +1,312 @@
+@font-face{
+    font-family: "Montserrat";
+    src: url("/CSS/Propiedades\ de\ Texto/Montserrat-Regular") format("truetype");
+    font-weight: 300;
+}
+
+video {
+    max-width: 100%;
+    height: auto;
+  }
+
+
+  .fade-in {
+    animation: fadeIn ease 3s;
+    -webkit-animation: fadeIn ease 3s;
+  }
+  
+  @keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+
+h1{
+    font-family: Montserrat;
+    color: white;
+    text-align: center;
+    letter-spacing: 1cm;
+    font-size: 40px;
+    font-weight: 600;
+    
+    
+
+}
+
+h1:hover{
+    color: bisque;
+    font-weight: 900;
+    transition: 0.3s;
+    cursor: default;
+
+}
+
+
+h3{
+    font-family:  Montserrat;
+    font-weight: 600;
+    text-align: justify;
+    text-align: center;
+    font-size:  20px;
+    color: skyblue;
+}
+
+h3:hover{
+    color: burlywood;
+    font-weight: 700;
+    transition: 0.3s;
+    cursor: default;
+
+}
+
+
+body {
+    background-image: url('Imagen/Intro-HELLO-FUTURE-1920x1080_v2.gif'); 
+    background-size:auto; 
+}
+
+#start-button {
+    font-family: Montserrat;
+    font-weight: 900;
+    display:flex;
+    margin: 30px auto; 
+    padding: 12px 24px;
+    font-size: 18px;
+    background-color: #00bcd4;
+    color: white;
+    border: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform:uppercase;
+    box-shadow: 2px 0px 10px rgba(17, 0, 255, 0.322);
+    
+}
+
+#start-button:hover {
+    background-color: #0056b3;
+    transition: background-color 0.3s;
+}  
+
+#webcam-container canvas{
+    border: 10px white;
+    border-radius: 35px;
+    max-width: 600px;
+}
+
+.cuadro-camara canvas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00bcd4;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+
+#integrantes-footer{
+    display: block;
+    font-family: Montserrat;
+    color: azure;
+    margin-top: 50px;
+    text-shadow: 1px 1px 0.5px gray;
+    font-variant: small-caps;
+    border-radius: 8px;
+    font-size: 11px;
+}
+
+#integrantes-footer {
+    font-size: 13px;
+    transition: color 0.5s;
+}
+#integrantes-footer:hover {
+    color: lightblue;
+}
+
+.caja-transparente {
+    background-color: rgba(255, 255, 255, 0.466);
+    padding: 60px;
+    border-radius: 12px;
+    max-width: 1400px;
+    margin: 10px auto;
+    box-shadow: 5px 7px 10px rgba(0, 0, 0, 1);
+    text-align: center;
+    display: flex;          /* Añadir flexbox */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center;    /* Centrar verticalmente */
+    flex-direction: column; /* Apilar elementos verticalmente */
+}
+
+#titulo-ia{
+    font-family: Montserrat;
+    text-shadow: 1px 2px 1px  blue;
+    color: rgb(243, 243, 243);
+    font-weight: 700;
+    font-size: 30px;
+    cursor: default;
+    text-align: center;
+}
+
+#titulo-ia:hover{
+    letter-spacing: 0.05cm;
+    transition: 0.5s;
+}
+
+
+.contenedor-flex {
+    display: flex;
+    align-items: center;    /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+    gap: 100px; 
+    flex-wrap: wrap; 
+    margin-top: 20px;
+    width: 100%;           /* Asegurar que ocupe todo el ancho */
+}
+
+
+#mensaje {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.562);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: none;
+}
+
+#mensaje .contenido {
+    font-family: Montserrat;
+    font-size: 25px;
+    text-align: center ;
+    color: aliceblue;
+    background-color: rgba(0, 247, 255, 0.322);
+    max-width: 900px;
+    padding: 30px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: none;
+}
+
+#mensaje .contenido button {
+    display: flexbox;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding: 20px 30px;
+    font-size: 20px;
+    font-weight: 700;
+    border: none;     
+    font-family: Montserrat;
+    color: rgb(0, 183, 255);
+    box-shadow: none;
+    cursor:pointer;
+}
+
+#mensaje .contenido button:hover {
+    background-color: #0056b3;
+    color: aliceblue;
+    box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.267);
+    transition: 1s;
+}
+
+.emoji-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Para que quede detrás de todo */
+    pointer-events: none; /* No interfiere con clicks */
+}
+
+.emoji {
+    position: absolute;
+    filter: hue-rotate(180deg) saturate(1) brightness(1.2);
+    font-size: 30px;
+    opacity: 0.5;
+    animation: float 10s linear infinite;
+    animation-delay: calc(var(--i) * -2s); /* animación escalonada */
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100vh) translateX(0);
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-10vh) translateX(30px);
+        opacity: 0;
+    }
+}
+
+
+.Cuadros-label {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* Centrar elementos hijos horizontalmente */
+}
+
+/* Contenedor del cuadro con color suave */
+.prediccion {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 10px auto;
+    border-radius: 15px;
+    overflow: hidden;
+    font-family: Montserrat;
+    color: #ffffff;
+    font-weight: bolder;
+    font-size: 16px;
+    text-align: center;
+    height: 30px;
+    border: 10px solid transparent;
+}
+/* Fondo base por cada categoría */
+.color-0 { background-color: #793f53; border-color: #ec407a; } /* rosado */
+.color-1 { background-color: #5584aa; border-color: #42a5f5; } /* azul */
+.color-2 { background-color: #59a75b; border-color: #66bb6a; } /* verde */
+.color-3 { background-color: #92764d; border-color: #ffa726; } /* naranja */
+.color-4 { background-color: #874992; border-color: #ab47bc; } /* morado */
+
+
+/* Estilos para las barras de progreso */
+.barra {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    z-index: 1;
+    transition: width 0.5s ease-out;
+    opacity: 0.8;
+}
+
+/* Colores base para las categorías */
+.color-0 .barra { background-color: #ec407a; } /* rosado */
+.color-1 .barra { background-color: #42a5f5; } /* azul */
+.color-2 .barra { background-color: #66bb6a; } /* verde */
+.color-3 .barra { background-color: #ffa726; } /* naranja */
+.color-4 .barra { background-color: #ab47bc; } /* morado */
+
+
+.label {
+    position: center;
+    z-index: 3;
+    padding: 10px;
+    line-height: 10px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+}
